@@ -1,0 +1,58 @@
+<!-- res/layout/list_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profileImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/user"/>
+
+    <!-- Name and professional title -->
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profileImage"
+        android:text="DR Mohammed"
+        android:layout_marginLeft="15dp"
+        android:textSize="16sp" />
+
+    <!-- Hospital name -->
+    <TextView
+        android:id="@+id/hospitalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextView"
+        android:layout_toEndOf="@id/profileImage"
+        android:text="Dentist | Royal Hospital"
+        android:layout_marginLeft="15dp"
+        android:textSize="14sp" />
+
+    <!-- Star rating -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hospitalTextView"
+        android:layout_toEndOf="@id/profileImage"
+        android:layout_marginLeft="15dp"
+        android:numStars="5"
+        android:rating="4.8" />
+
+    <!-- Numerical rating -->
+    <TextView
+        android:id="@+id/numericalRatingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hospitalTextView"
+        android:layout_toEndOf="@id/ratingBar"
+        android:text="4.8"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp" />
+</RelativeLayout>
