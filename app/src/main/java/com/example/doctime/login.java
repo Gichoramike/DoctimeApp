@@ -25,7 +25,7 @@ public class login extends AppCompatActivity {
         loginbutton = findViewById(R.id.loginButton);
         signupbutton = findViewById(R.id.signupButton);
 
-        usernameInputLayout = findViewById(R.id.usernameInputLayout);
+        usernameInputLayout = findViewById(R.id.emailInputLayout);
         passwordInputLayout = findViewById(R.id.passwordInputLayout);
 
         usernameInput = usernameInputLayout.getEditText();

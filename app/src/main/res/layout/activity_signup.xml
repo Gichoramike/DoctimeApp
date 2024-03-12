@@ -52,18 +52,34 @@
             android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/usernameInputLayout"
+            android:id="@+id/nameInputLayout"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="110dp"
-            android:hint="Username">
+            android:hint="Name">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/usernameInput"
+                android:id="@+id/nameInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailInputLayout"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200dp"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,26 +89,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200dp"
-            android:hint="Password"
-            app:endIconMode="password_toggle">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ConfirmInputLayout"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="290dp"
-            android:hint="Confirm Password"
+            android:hint="Password"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
