@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize" >
+    android:layout_height="match_parent">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -13,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="745dp"
+        android:layout_marginTop="680dp"
         app:itemTextColor="@color/blue"
         app:itemIconTint="@color/blue"
         app:elevation="6dp"
@@ -59,7 +58,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp">
+            android:layout_marginTop="140dp">
 
             <com.google.android.material.search.SearchBar
                 android:id="@+id/search_bar"
@@ -74,7 +73,7 @@
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="50dp"
         android:text="Hello"
         android:textSize="24sp"
         android:fontFamily="@font/poppins_medium"/>
@@ -83,7 +82,7 @@
         android:layout_width="150dp"
         android:layout_height="35dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:text="William"
         android:textSize="24sp"
         android:fontFamily="@font/poppins_medium"/>
@@ -91,17 +90,18 @@
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/user"
-        android:layout_marginLeft="290dp"/>
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="50dp"/>
 
 
     <TextView
         android:layout_width="150dp"
         android:layout_height="25dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="250dp"
         android:text="Speciality"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"/>
@@ -113,7 +113,7 @@
         android:backgroundTint="@color/blue"
         app:cardCornerRadius="23dp"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="290dp">
 
         <ImageButton
             android:layout_width="match_parent"
@@ -141,7 +141,7 @@
         app:cardCornerRadius="23dp"
         android:layout_toRightOf="@id/card_general"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="290dp"
         >
 
         <ImageButton
@@ -170,7 +170,7 @@
         app:cardCornerRadius="23dp"
         android:layout_toRightOf="@id/card_dentist"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="290dp">
 
         <ImageButton
             android:layout_width="match_parent"
@@ -194,7 +194,7 @@
     <TextView
         android:id="@+id/topdoctor"
         android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="445dp"
         android:text="Top Doctors"
@@ -203,13 +203,17 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="125dp"
         android:layout_below="@+id/topdoctor"
         android:layout_marginTop="10dp"/>
 
 
-
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/blue"
+        app:title="My Toolbar Title" />
 
 
 </RelativeLayout>

@@ -1,23 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment" >
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_home"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="680dp"
+        app:itemTextColor="@color/blue"
+        app:itemIconTint="@color/blue"
+        app:elevation="6dp"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@color/black"
+        app:menu="@menu/bottom_nav_menu"/>
+
+
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_home"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:navGraph="@navigation/mobile_navigation">
+
+    </fragment>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/searchbar_scrolling_view_behavior">
+            <!-- Screen content goes here. -->
+            <com.google.android.material.search.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search Doctor">
+                <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
+            </com.google.android.material.search.SearchView>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp">
+
+            <com.google.android.material.search.SearchBar
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="Search Doctor" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Hello"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_medium"/>
+    <TextView
+        android:id="@+id/usertag"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:text="William"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/user"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="50dp"/>
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="250dp"
+        android:text="Speciality"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@id/card_general"
+        android:layout_width="108dp"
+        android:layout_height="143dp"
+        android:backgroundTint="@color/blue"
+        app:cardCornerRadius="23dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="290dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/general"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/blue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="General"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dentist"
+        android:layout_width="108dp"
+        android:layout_height="143dp"
+        android:backgroundTint="@color/blue"
+        app:cardCornerRadius="23dp"
+        android:layout_toRightOf="@id/card_general"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="290dp"
+        >
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dentist"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/blue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Dentist"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_pediatric"
+        android:layout_width="108dp"
+        android:layout_height="143dp"
+        android:backgroundTint="@color/blue"
+        app:cardCornerRadius="23dp"
+        android:layout_toRightOf="@id/card_dentist"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="290dp">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pediatric"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/blue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Pediatric"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/topdoctor"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="445dp"
+        android:text="Top Doctors"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_medium"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_below="@+id/topdoctor"
+        android:layout_marginTop="10dp"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/blue"
+        app:title="My Toolbar Title" />
+
+
+</RelativeLayout>

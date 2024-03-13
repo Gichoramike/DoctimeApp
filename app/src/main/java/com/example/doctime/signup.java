@@ -69,7 +69,7 @@ public class signup extends AppCompatActivity {
                 String name = nameInput.getText().toString();
 
                 if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(name)){
-                    Toast.makeText(signup.this,"Enter email",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(signup.this,"Enter fields",Toast.LENGTH_SHORT).show();
 
                 } else if (password.length()<6) {
 

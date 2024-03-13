@@ -12,6 +12,7 @@ import com.example.doctime.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
 
+
     private ActivityHomeBinding binding;
 
     @Override
@@ -22,7 +23,9 @@ public class HomeActivity extends AppCompatActivity {
 
         // Set up the toolbar as the action bar
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar); // Set the toolbar as action bar
+        getSupportActionBar().hide();
+
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -31,5 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+
     }
 }
