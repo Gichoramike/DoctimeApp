@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Appointment"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/title_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule Appointment"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_schedule"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/date_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_schedule"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp">
+
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_schedule" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="250dp"
+                android:text="Set Date"/>
+            <TextView
+                android:id="@+id/title_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Time"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/date_container"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"/>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/time_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_time"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp">
+
+
+
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_schedule"
+                    android:layout_gravity="center_horizontal"
+                    android:timePickerMode="spinner"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="200dp"
+                android:text="Set Date"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        style="@style/Widget.Design.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700dp"
+        app:itemTextColor="@color/blue"
+        app:itemIconTint="@color/blue"
+        app:elevation="6dp"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        android:elevation="2dp"/>
+
+</RelativeLayout>

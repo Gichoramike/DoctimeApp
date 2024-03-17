@@ -4,37 +4,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
+        style="@style/Widget.Design.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="680dp"
+        android:layout_marginTop="700dp"
         app:itemTextColor="@color/blue"
         app:itemIconTint="@color/blue"
         app:elevation="6dp"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@color/black"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu"
+        android:elevation="2dp"/>
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="680dp"-->
+<!--        android:background="@color/blue">-->
 
 
 
-    <fragment
-        android:id="@+id/nav_host_fragment_activity_home"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/nav_view"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation">
+<!--        <ImageButton-->
+<!--            android:id="@+id/homeBtn"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:background="@drawable/home_icon"-->
+<!--            android:backgroundTint="@color/black"-->
+<!--            android:layout_marginTop="5dp"-->
 
-    </fragment>
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/hometext"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="Home"-->
+<!--            android:layout_marginStart="25dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:textColor="@color/black"-->
+
+<!--            />-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/scheduleBtn"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@drawable/schedule_icon"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:layout_toRightOf="@+id/homeBtn" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/appointment_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:text="Schedule"-->
+<!--            android:gravity="center_vertical|center_horizontal"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginLeft="40dp"-->
+<!--            android:layout_toRightOf="@+id/hometext"-->
+<!--            android:textColor="@color/white"-->
+<!--            />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/doctorBtn"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@drawable/doctor_icon"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:layout_toRightOf="@+id/scheduleBtn" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/doctor_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:text="Doctor"-->
+<!--            android:gravity="center_vertical|center_horizontal"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginLeft="46dp"-->
+<!--            android:layout_toRightOf="@+id/scheduleBtn"-->
+<!--            android:textColor="@color/white"-->
+<!--            />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/profileBtn"-->
+<!--            android:layout_width="35dp"-->
+<!--            android:layout_height="35dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@drawable/profile_icon"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:layout_toRightOf="@+id/doctorBtn" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/profile_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:text="Profile"-->
+<!--            android:gravity="center_vertical|center_horizontal"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginLeft="48dp"-->
+<!--            android:layout_toRightOf="@+id/doctorBtn"-->
+<!--            android:textColor="@color/white"-->
+<!--            />-->
+
+<!--    </RelativeLayout>-->
+
+
+
+
+
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -83,7 +168,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="80dp"
-        android:text="William"
+        android:text="Michael"
         android:textSize="24sp"
         android:fontFamily="@font/poppins_medium"/>
 
@@ -98,97 +183,105 @@
 
 
     <TextView
-        android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="245dp"
         android:text="Speciality"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@id/card_general"
-        android:layout_width="108dp"
-        android:layout_height="143dp"
-        android:backgroundTint="@color/blue"
-        app:cardCornerRadius="23dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="290dp">
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/general"
-            android:layout_gravity="center_vertical"
-            android:backgroundTint="@color/blue"/>
+        <androidx.cardview.widget.CardView
+            android:id="@id/card_general"
+            android:layout_width="108dp"
+            android:layout_height="143dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="290dp"
+            android:clickable="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="General"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginTop="30dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/general"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/blue"/>
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="General"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_dentist"
-        android:layout_width="108dp"
-        android:layout_height="143dp"
-        android:backgroundTint="@color/blue"
-        app:cardCornerRadius="23dp"
-        android:layout_toRightOf="@id/card_general"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="290dp"
-        >
+        </androidx.cardview.widget.CardView>
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dentist"
-            android:layout_gravity="center_vertical"
-            android:backgroundTint="@color/blue"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_dentist"
+            android:layout_width="108dp"
+            android:layout_height="143dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_toRightOf="@id/card_general"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="290dp"
+            android:background="@drawable/doctor_icon"
+            android:clickable="true"
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="Dentist"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginTop="30dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dentist"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/blue"/>
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Dentist"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_pediatric"
-        android:layout_width="108dp"
-        android:layout_height="143dp"
-        android:backgroundTint="@color/blue"
-        app:cardCornerRadius="23dp"
-        android:layout_toRightOf="@id/card_dentist"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="290dp">
+        </androidx.cardview.widget.CardView>
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/pediatric"
-            android:layout_gravity="center_vertical"
-            android:backgroundTint="@color/blue"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_pediatric"
+            android:layout_width="108dp"
+            android:layout_height="143dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_toRightOf="@id/card_dentist"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="290dp"
+            android:clickable="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="Pediatric"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginTop="30dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pediatric"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/blue"/>
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Pediatric"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
 
 
     <TextView
@@ -201,19 +294,114 @@
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"/>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tpDoctorcard1"
+        android:layout_width="360dp"
+        android:layout_height="90dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="23dp"
         android:layout_below="@+id/topdoctor"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/doc_pic1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="Dr.Wangare"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:layout_marginStart="100dp"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Dentist"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:layout_marginStart="100dp"/>
+        <RatingBar
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="55dp"/>
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/blue"
-        app:title="My Toolbar Title" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tpDoctorcard2"
+        android:layout_width="360dp"
+        android:layout_height="90dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="23dp"
+        android:layout_below="@+id/tpDoctorcard1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/doc_pic2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="Dr.Wangare"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:layout_marginStart="100dp"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Dentist"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            android:layout_marginStart="100dp"/>
+        <RatingBar
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="55dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
 
 
 </RelativeLayout>
