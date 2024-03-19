@@ -12,11 +12,11 @@
         style="@style/Widget.Design.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/blue"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="700dp"
-        app:itemTextColor="@color/blue"
-        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:elevation="6dp"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@color/black"
@@ -85,14 +85,16 @@
                     android:layout_marginStart="100dp"/>
                 <RatingBar
                     style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
-                    android:rating="4"
+                    android:rating="4.5"
                     android:layout_marginStart="100dp"
-                    android:layout_marginTop="55dp"/>
+                    android:layout_marginTop="55dp"
+                    android:progressTint="@color/filled_star_color"/>
 
                 <Button
+                    android:id="@+id/scheduleBtn1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Schedule"
@@ -143,14 +145,16 @@
                     android:layout_marginStart="100dp"/>
                 <RatingBar
                     style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
                     android:rating="4"
                     android:layout_marginStart="100dp"
-                    android:layout_marginTop="55dp"/>
+                    android:layout_marginTop="55dp"
+                    android:progressTint="@color/filled_star_color"/>
 
                 <Button
+                    android:id="@+id/scheduleBtn2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -201,14 +205,16 @@
                     android:layout_marginStart="100dp"/>
                 <RatingBar
                     style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
-                    android:rating="4"
+                    android:rating="3.5"
                     android:layout_marginStart="100dp"
-                    android:layout_marginTop="55dp"/>
+                    android:layout_marginTop="55dp"
+                    android:progressTint="@color/filled_star_color"/>
 
                 <Button
+                    android:id="@+id/scheduleBtn3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Schedule"
@@ -259,14 +265,16 @@
                     android:layout_marginStart="100dp"/>
                 <RatingBar
                     style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
-                    android:rating="4"
+                    android:rating="3.5"
                     android:layout_marginStart="100dp"
-                    android:layout_marginTop="55dp"/>
+                    android:layout_marginTop="55dp"
+                    android:progressTint="@color/filled_star_color"/>
 
                 <Button
+                    android:id="@+id/scheduleBtn4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Schedule"
@@ -318,14 +326,16 @@
                     android:layout_marginStart="100dp"/>
                 <RatingBar
                     style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="100dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
-                    android:rating="4"
+                    android:rating="3"
                     android:layout_marginStart="100dp"
-                    android:layout_marginTop="55dp"/>
+                    android:layout_marginTop="55dp"
+                    android:progressTint="@color/filled_star_color"/>
 
                 <Button
+                    android:id="@+id/scheduleBtn5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Schedule"

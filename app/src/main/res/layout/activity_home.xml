@@ -12,11 +12,11 @@
         style="@style/Widget.Design.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/blue"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="700dp"
-        app:itemTextColor="@color/blue"
-        app:itemIconTint="@color/blue"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:elevation="6dp"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@color/black"
@@ -122,37 +122,50 @@
 
 
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        &lt;!&ndash; NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). &ndash;&gt;-->
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_behavior="@string/searchbar_scrolling_view_behavior">-->
+<!--            &lt;!&ndash; Screen content goes here. &ndash;&gt;-->
+<!--            <com.google.android.material.search.SearchView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Search Doctor">-->
+<!--                &lt;!&ndash; Search suggestions/results go here (ScrollView, RecyclerView, etc.). &ndash;&gt;-->
+<!--            </com.google.android.material.search.SearchView>-->
+<!--        </androidx.core.widget.NestedScrollView>-->
+
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="140dp">-->
+
+<!--            <com.google.android.material.search.SearchBar-->
+<!--                android:id="@+id/search_bar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:hint="Search Doctor" />-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="@color/white">
 
-        <!-- NestedScrollingChild goes here (NestedScrollView, RecyclerView, etc.). -->
-        <androidx.core.widget.NestedScrollView
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/searchbar_scrolling_view_behavior">
-            <!-- Screen content goes here. -->
-            <com.google.android.material.search.SearchView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Search Doctor">
-                <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
-            </com.google.android.material.search.SearchView>
-        </androidx.core.widget.NestedScrollView>
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp">
-
-            <com.google.android.material.search.SearchBar
-                android:id="@+id/search_bar"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:hint="Search Doctor" />
-        </com.google.android.material.appbar.AppBarLayout>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            android:layout_height="60dp"
+            android:hint="Search Doctor" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:layout_width="150dp"
@@ -183,6 +196,7 @@
 
 
     <TextView
+        android:id="@+id/title_speciality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -190,6 +204,18 @@
         android:text="Speciality"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View all"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/title_speciality"
+        android:layout_marginTop="240dp"
+        android:layout_marginStart="120dp"
+        android:backgroundTint="@color/white"/>
 
 
         <androidx.cardview.widget.CardView
@@ -290,6 +316,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="445dp"
+        android:layout_marginBottom="10dp"
         android:text="Top Doctors"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_medium"/>
@@ -335,12 +362,23 @@
             android:layout_marginStart="100dp"/>
         <RatingBar
             style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="4"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="55dp"/>
+            android:layout_marginTop="55dp"
+            android:progressTint="@color/filled_star_color"/>
+
+        <Button
+            android:id="@+id/scheduleBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="220dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/blue"/>
 
 
     </androidx.cardview.widget.CardView>
@@ -385,12 +423,22 @@
             android:layout_marginStart="100dp"/>
         <RatingBar
             style="?android:attr/ratingBarStyleSmall"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
             android:rating="4"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="55dp"/>
+            android:layout_marginTop="55dp"
+            android:progressTint="@color/filled_star_color"/>
+        <Button
+            android:id="@+id/scheduleBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="220dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/blue"/>
 
 
     </androidx.cardview.widget.CardView>

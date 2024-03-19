@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.DatePicker;
+import android.widget.Button;
 import android.widget.TimePicker;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -14,18 +14,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Appointment extends AppCompatActivity {
 
     BottomNavigationView nav_view;
-//    DatePicker date_picker;
+
 //
-//    TimePicker time_picker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
 
+
         nav_view = findViewById(R.id.nav_view);
 //        date_picker = findViewById(R.id.date_picker);
-//        time_picker = findViewById(R.id.time_picker);
+
+
+
 
         nav_view.setOnItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -47,5 +49,12 @@ public class Appointment extends AppCompatActivity {
                 return false;
             }
         });
+
+//        time_picker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+//            @Override
+//            public void onTimeChanged(TimePicker timePicker, int i, int i1) {
+//
+//            }
+//        });
     }
 }
