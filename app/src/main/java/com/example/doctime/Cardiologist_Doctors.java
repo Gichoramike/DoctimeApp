@@ -9,14 +9,14 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Pediatric_Doctors extends AppCompatActivity {
+public class Cardiologist_Doctors extends AppCompatActivity {
 
     BottomNavigationView nav_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pediatric_doctors);
+        setContentView(R.layout.activity_cardiologist_doctors);
 
         nav_view = findViewById(R.id.nav_view);
 
@@ -25,13 +25,13 @@ public class Pediatric_Doctors extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Intent intent = null;
                 if (item.getItemId() == R.id.home_btn) {
-                    intent = new Intent(Pediatric_Doctors.this, HomeActivity.class);
+                    intent = new Intent(Cardiologist_Doctors.this, HomeActivity.class);
                 } else if (item.getItemId() == R.id.appointment_btn) {
-                    intent = new Intent(Pediatric_Doctors.this, Appointment.class);
+                    intent = new Intent(Cardiologist_Doctors.this, Appointment.class);
                 } else if (item.getItemId() == R.id.doctor_btn) {
-                    intent = new Intent(Pediatric_Doctors.this, DoctorActivity.class);
+                    intent = new Intent(Cardiologist_Doctors.this, DoctorActivity.class);
                 } else if (item.getItemId() == R.id.profile_btn) {
-                    intent = new Intent(Pediatric_Doctors.this, Profile.class);
+                    intent = new Intent(Cardiologist_Doctors.this, Profile.class);
                 }
                 if (intent != null) {
                     startActivity(intent);

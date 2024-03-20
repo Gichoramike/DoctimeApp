@@ -8,17 +8,19 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
+        style="@style/Widget.Design.BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/blue"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="680dp"
-        app:itemTextColor="@color/blue"
-        app:itemIconTint="@color/blue"
+        android:layout_marginTop="700dp"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:elevation="6dp"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@color/black"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu"
+        android:elevation="2dp"/>
 
     <TextView
         android:layout_width="150dp"

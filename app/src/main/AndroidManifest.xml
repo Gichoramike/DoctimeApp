@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Doctime"
         tools:targetApi="31">
         <activity
+            android:name=".Ear_Doctors"
+            android:exported="false" />
+        <activity
+            android:name=".Cardiologist_Doctors"
+            android:exported="false" />
+        <activity
+            android:name=".Optha_Doctors"
+            android:exported="false" />
+        <activity
+            android:name=".Speciality"
+            android:exported="false" />
+        <activity
             android:name=".Pediatric_Doctors"
             android:exported="false" />
         <activity

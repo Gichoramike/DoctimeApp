@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Speciality">
+
+
+
+    <TextView
+        android:id="@+id/title_specialty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Specialty"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_specialty"
+        android:rowCount="3"
+        android:layout_centerHorizontal="true"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@id/card_general"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/title_specialty"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/general_icon"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="General"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_dentist"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_toRightOf="@id/card_general"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/title_specialty"
+            android:background="@drawable/doctor_icon"
+            android:clickable="true"
+            app:cardElevation="1dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dentist"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dentist"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_pediatric"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_below="@id/card_dentist"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pediatric"
+                android:layout_gravity="center_vertical"
+                android:backgroundTint="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pediatric"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_optha"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_toRightOf="@id/card_general"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/card_dentist"
+            android:clickable="true"
+            app:cardElevation="1dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/eye_icon"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:backgroundTint="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opthamologist"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="30dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_cardiologist"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_below="@id/card_pediatric"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true">
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/heart_icon1"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:backgroundTint="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Cardiologist"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="35dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_ear"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="23dp"
+            android:layout_toRightOf="@id/card_general"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/card_optha"
+            android:clickable="true"
+            app:cardElevation="1dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ear_icon"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:backgroundTint="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ears"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="35dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+    </GridLayout>
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        style="@style/Widget.Design.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700dp"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:elevation="6dp"
+        app:labelVisibilityMode="labeled"
+        app:itemActiveIndicatorStyle="@color/black"
+        app:menu="@menu/bottom_nav_menu"
+        android:elevation="2dp"/>
+
+
+
+
+</RelativeLayout>

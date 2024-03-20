@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,8 +26,10 @@ import com.google.android.material.search.SearchBar;
 public class HomeActivity extends AppCompatActivity {
 
 
-    private ActivityHomeBinding binding;
+//    private ActivityHomeBinding binding;
 //    SearchBar search_bar;
+    Button btnViewAll;
+
     CardView card_general,card_dentist,card_pediatric;
     BottomNavigationView nav_view;
 
@@ -41,9 +44,7 @@ public class HomeActivity extends AppCompatActivity {
         card_dentist = findViewById(R.id.card_dentist);
         card_pediatric = findViewById(R.id.card_pediatric);
 
-
-
-
+        btnViewAll = findViewById(R.id.btnViewAll);
         nav_view = findViewById(R.id.nav_view);
 
 
@@ -65,6 +66,15 @@ public class HomeActivity extends AppCompatActivity {
                     return true;
                 }
                 return false;
+            }
+        });
+
+        btnViewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, Speciality.class);
+                startActivity(intent);
+
             }
         });
 
