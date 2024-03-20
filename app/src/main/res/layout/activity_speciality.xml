@@ -29,6 +29,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@id/card_general"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:backgroundTint="@color/blue"
@@ -58,6 +59,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_dentist"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:backgroundTint="@color/blue"
@@ -91,6 +93,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_pediatric"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:backgroundTint="@color/blue"
@@ -120,16 +123,17 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_optha"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:backgroundTint="@color/blue"
             app:cardCornerRadius="23dp"
             android:layout_toRightOf="@id/card_general"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_below="@+id/card_dentist"
             android:clickable="true"
-            app:cardElevation="1dp">
+            app:cardElevation="2dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -151,13 +155,14 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_cardiologist"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:backgroundTint="@color/blue"
             app:cardCornerRadius="23dp"
             android:layout_below="@id/card_pediatric"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:clickable="true">
 
             <View
@@ -181,6 +186,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_ear"
+            style="?attr/materialCardViewElevatedStyle"
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:backgroundTint="@color/blue"
